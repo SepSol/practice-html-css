@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media</title>
+</head>
+
+<body>
+
+    <h1>Media</h1>
+
+    <br />
+    <svg width="500" height="400">
+        <circle cx="80" cy="60" r="50" fill="yellow" stroke="red" />
+        <ellipse cx="200" cy="110" rx="50" ry="100" style="fill:orange; stroke:deeppink; stroke-width:5px;" />
+        <rect x="50" y=60 width="80" height="30" fill="green" />
+        <polygon points="200 300, 250 350, 300 300" style="fill:cyan; stroke:darkgoldenrod; stroke-width:7;" />
+        <!--The polygon element is unique because it automatically closes off the shape for you. -->
+        <line x1="100" y1="100" x2="200" y2="150" style="stroke:#000000; stroke-linecap:round; stroke-width:10" />
+        <polyline points="300 300, 350 350, 400 300"
+            style="stroke-linejoin:miter; stroke:black; stroke-width:7; fill:red" />
+        <!--Every element and every attribute in SVG files can be animated.
+        SVG stand for Scalable Vector Graphics-->
+    </svg>
+
+
+
+    <br />
+    <svg width="500" height="400">
+        <circle cy="100" r="80" fill="cyan" stroke="red">
+            <animate attributeName="cx" from="100" to="300" dur="2" repeatCount="3" fill="freeze" />
+            <!--fill Values: "remove" resets the value, keeps the "from" value; "freeze" keeps the “to" value-->
+            <!--to repeat the animation indefinitely, use the value "indefinite" for the "repeatCount" attribute.-->
+        </circle>
+
+
+        <!-- The following commands are available for path data:
+        M: moveto
+        L: lineto
+        H: horizontal lineto
+        V: vertical lineto
+        C: curveto
+        S: smooth curveto
+        Q: quadratic Bézier curve
+        T: smooth quadratic Bézier curveto
+        A: elliptical Arc
+        Z: closepath
+
+        Define a path using the d attribute:  -->
+        <path d="M 0 0 L200 200 L200 0 Z" style="stroke:#000;  fill:none;" />
+        <!--M 0 0 L200 200 L200 0 Z: First imagine a dot at x=0 y=0; 
+            then make a point at x=200 y=200 ... first join this ... it is a hypotenuse; 
+            then put a point at x=200 Y=0 ...join this line ... it is the perpendicular line; 
+            Z will join the line by itself to make a Base, and the overall triangle. 
+        
+            All of the above commands can also be expressed with lower case letters. 
+            When capital letters are used, it indicates absolute position; lower case indicates relative position.-->
+    </svg>
+
+
+    <br />
+    <!--The <canvas> element is only a container for graphics. 
+        You must use a script to actually draw the graphics (usually JavaScript).
+        The <canvas> element must have an id attribute so it can be referred to by JavaScript: -->
+    <canvas id="canvas1" width="500" height="400"></canvas>
+    <script>
+        var can = document.getElementById('canvas1');
+        var ctx = can.getContext('2d');
+        // getContext() returns a drawing context on the canvas.
+
+        // draw a filled rectangle:
+        ctx.fillRect(20, 20, 40, 60); // fillRect( x, y, w, h): Defines a Rectangle.
+
+        // change fill color:
+        ctx.fillStyle = "rgba(200, 50 ,50, 1)"; // to change the fill color
+        ctx.fillRect(80, 30, 60, 40);
+
+        // draw a line:
+        ctx.moveTo(100, 50); // moveTo(x,y): Defines the starting point of the line.
+        ctx.lineTo(200, 200); // lineTo(x,y): Defines the ending point of the line.
+        ctx.stroke(); // stroke(): Ends the drawing.
+
+        // draw a circle:
+        ctx.beginPath(); // beginPath(): Starts the drawing.
+        ctx.arc(150, 250, 50, 0, 270); // arc(x,y,r,start,stop): Sets the parameters of the circle.
+        ctx.stroke(); // stroke(): Ends the drawing.
+
+        // gradients:
+        // createLinearGradient(x,y,x1,y1): Creates a linear gradient.
+        // createRadialGradient(x,y,r,x1,y1,r1): Creates a radial/circular gradient.
+
+        // draw a text:
+        ctx.font = "bold 22px Tahoma"; // Font: Defines the font properties for the text.
+        ctx.fillText('Filled Text', 100, 300); // fillText(text,x,y): Draws "filled" text on the canvas.
+        ctx.strokeText('STROKE B4 TRANSFORMATION', 50, 50); // strokeText(text,x,y): Draws text on the canvas (no fill).
+
+        // === TRANSFORMATIONS === //
+        // translation:
+        ctx.translate(100, 100); // The translate(x,y) method is used to move the Canvas.
+        ctx.fillText('after translation', 50, 50);
+        // rotate:
+        ctx.rotate(
+        25); // The rotate() method is used to rotate the HTML5 Canvas. The value must be in radians, not degrees.
+        ctx.fillText('after rotation', 50, 50);
+        // scale:
+        ctx.scale(1.5, 3); // The scale(x,y) method scales the current drawing.
+        ctx.fillText('after scale', 50, 50);
+
+        // There are many other methods aimed at helping to draw shapes and images on the canvas.
+    </script>
+
+
+    <br />
+    <img src="../000-media/sample.jpg" width="20%" alt="a basket full of fruits">
+
+    <br />
+    <!--embedded from giphy-->
+    <iframe src="https://giphy.com/embed/1YhafU1NFtethNxJwa" width="480" height="222" frameBorder="0"
+        class="giphy-embed" allowFullScreen></iframe>
+    <p><a href="https://giphy.com/gifs/punch-card-computer-1YhafU1NFtethNxJwa">via GIPHY</a></p>
+    <!--Another tag that can be used to incorporate media content into a page is the <embed> tag, which can embed any media content including videos, audio files, and gifs from an external source. This means that websites that have an embed button have some form of media content that can be added to other websites. The <embed> tag is a self-closing tag, unlike the <video> element.
+        
+    Embed can be used to add local files as well as media content straight from some other websites.-->
+
+    <br />
+    <!--standard embedded: gif url-->
+    <embed src="https://giphy.com/gifs/1YhafU1NFtethNxJwa/html5">
+
+    <br />
+    <!--local video-->
+    <video width="400" height="225" src="../000-media/Random CS-GO Bullshittery (part 1).mp4" controls muted>Video not
+        supported</video>
+
+    <br />
+    <!--standard embedded: local-->
+    <embed src="../000-media/Random CS-GO Bullshittery (part 1).mp4">
+
+
+    <br />
+    <!--standard embedded: youtube-->
+    <embed src="https://www.youtube.com/embed/vmINGWsyWX0">
+
+    <br />
+    <!--youtube embedded-->
+    <iframe width="400" height="225" src="https://www.youtube.com/embed/vmINGWsyWX0" frameborder="0"
+        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+
+    <br />
+    <!--an audio file-->
+    <audio autoplay loop controls>
+        <source src="../000-media/Kathy_Gulliver_Sixteen_Dandelions.hd.mp3" type="audio/mp3">
+        <!-- <source src="Kathy_Gulliver_Sixteen_Dandelions.hd.ogg" type="audio/ogg"> -->
+        Audio not supported by your browser.
+        <!--Although not always necessary, it’s recommended that we state the type of audio as it helps the browser identify it more easily and determine if that type of audio file is supported by the browser.
+        MORE ATTRIBUTES: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/audio#Attributes-->
+    </audio>
+
+</body>
+
+</html>
