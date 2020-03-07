@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+
+<html lang="en">
+    
+    <head>
+
+        <title>JS Counter</title>
+
+    </head>
+
+    <body>
+
+        <div>
+
+            <h1 id="counter">0</h1>
+            <button id="decrement">-1</button>
+            <button id="increment">+1</button>
+            
+        </div>
+
+        <script>
+            let counter = 0;
+
+            document.querySelector('#decrement').onclick = function() { // a function without a name is called an anonymous function in js
+                counter--;
+                document.querySelector('#counter').innerHTML = counter;
+            }
+
+            document.querySelector('#increment').onclick = function() { // a function without a name is called an anonymous function in js
+                counter++;
+                document.querySelector('#counter').innerHTML = counter;
+            }
+        </script>
+
+    </body>
+
+</html>

@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+
+
+<html lang="en">
+
+    <head>
+
+        <title>Google</title>
+        <meta charset="UTF-8">   <!--OTHER OPTIONS: ASCII / UTF-8 / UTF-16   |   READ MORE: https://stackoverflow.com/questions/2241348/what-is-unicode-utf-8-utf-16-->
+
+        <!--2/3 EMBEDDED CSS STYLING-->
+        <style>
+            p {
+                font-family:sans-serif;
+            }
+            .title {
+                font-size:200%;
+            }
+            #quote {
+                font-style:italic;
+                background-color:rgb(245, 233, 192);
+                text-align:center
+            }
+        </style>
+
+        <!--3/3 EXTERNAL CSS STYLING-->
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="tables.css">
+        <!--1/2 USING BOOTSTRAP LIBRARY FOR CSS-->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <!--the last line is grabbed from the site below, it allows us to use bootstrap's predefined style library to style our webpages quicker-->
+        <!--https://getbootstrap.com/docs/4.4/getting-started/introduction/-->
+        
+
+        <!--1/2 INLINE JAVASCRIPT CODE-->
+        <script>
+            function greet() {
+                let name = document.querySelector('#name').value;
+                if (name === '') {
+                    name = 'world';
+                }
+                alert('Hello, ' + name + '!');
+                document.querySelector('#result').innerHTML = 'Hello, ' + name + '!';
+            }
+        </script>
+
+        <!--2/2 EXTERNAL JAVASCRIPT CODE-->
+        <script src="blink.js"></script>
+
+    </head>
+
+
+
+    <body>
+
+        <header>
+            <!--A <nav> is used to define a block of navigation links such as menus and tables of contents. It is important to note that <nav> can be used inside of the <header> element but can also be used on its own. -->
+            <nav>
+                <ul>
+                    <li><a href="./counter.html">Counter</a></li>
+                    <li><a href="./geolocation.html">Geolocation</a></li>
+                    <li><a href="./size.html">Size</a></li>
+                    <li><a href="./input.html">Input</a></li>
+                    <li><a href="./dragdrop.html">Drag & Drop</a></li>
+                    <li><a href="./media.html">Media</a></li>
+                </ul>
+            </nav>
+            <!--1/3 INLINE CSS STYLING-->
+            <h1 class="title" id="top" style="color:green">Google Search</h1>
+        </header>
+        
+        <main>
+            <!--a form to search google-->
+            <form action="https://www.google.com/search" method="get" target="_blank">
+                <input type="text" name="q">
+                <input type="submit" value="Search">
+            </form>
+
+
+            <br/>
+            <!--<section> defines elements in a document, such as chapters, headings, or any other area of the document with the same theme. A website’s home page could be split into sections for the introduction, news items, and contact information.-->
+
+
+            <section>
+                <article>
+                    <h2 class="title">Try the new search engine!</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <span style="background-color:rgb(247, 236, 133)">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</span> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                </article>
+            </section>
+
+
+            <br/>
+            <!--It is important to note that a <section> element could also be placed in an <article> element depending on the context.-->
+
+
+            <section>
+                <article>
+                    <h2 class="title">An amazing innovation</h2>
+                    <p><strong>Lorem ipsum</strong>, or <strong>lipsum</strong> as it is sometimes known, is dummy text used in laying out print, graphic or web designs. The passage is attributed to an unknown typesetter in the 15th century who is thought to have scrambled parts of Cicero's De Finibus Bonorum et Malorum for use in a type specimen book. It usually begins with:</p>
+                    <aside>
+                        <p id="quote">“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.”</p>
+                    </aside>
+                </article>
+            </section>
+
+
+            <br/>
+            <!--The <aside> element is used to mark additional information that can enhance another element but isn’t required in order to understand the main content. This element can be used alongside other elements such as <article> or <section>. Some common uses of the <aside> element are for:
+
+            * Bibliographies
+            * Endnotes
+            * Comments
+            * Pull quotes
+            * Editorial sidebars
+            * Additional information
+            -->
+
+
+            <!--you can assign multiple classes to an element-->
+            <section>
+                <h2 class="title red">We care about your privacy</h2>
+                <figure>
+                    <!--<figure> is an element used to encapsulate media such as an image, illustration, diagram, code snippet, etc, which is referenced in the main flow of the document. -->
+                    <img src="https://static.matomo.org/wp-content/uploads/2019/09/privacy-security-web-ready-1.png" alt="A picture of lock icon" style="width:70%">
+                    <figcaption>An illustration of an encrypted laptop</figcaption>
+                    <!--<figcaption> is an element used to describe the media in the <figure> tag. Usually, <figcaption> will go inside <figure>. This is different than using a <p> element to describe the content; if we decide to change the location of <figure>, the paragraph tag may get displaced from the figure while a <figcaption> will move with the figure. This is useful for grouping an image with a caption.-->
+                </figure>
+                <!--While the content in <figure> is related to the main flow of the document, its position is independent. This means that you can remove it or move it somewhere else without affecting the flow of the document.-->
+            </section>
+
+
+            <br/>
+            <!--The <thead> <tbody> <tfoot> tag is used to group header content in an HTML table.
+            
+            Browsers can use these elements to enable scrolling of the table body independently of the header and footer. Also, when printing a large table that spans multiple pages, these elements can enable the table header and footer to be printed at the top and bottom of each page.
+            
+            The <thead>, <tbody>, and <tfoot> elements will not affect the layout of the table by default. However, you can use CSS to style these elements.-->
+
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>item</th>
+                        <th scope="col">description</th>
+                        <th scope="col">price</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row" class="numCol">1</td>
+                        <td colspan="2">this is one of our best services</td>
+                        <td>$20.00</td>
+                    </tr>
+                    <tr class="trRecommended">
+                        <th scope="row" class="numCol">2</td>
+                        <td>email account</td>
+                        <td>check this one out</td>
+                        <td rowspan="2">$139.99</td>
+                    </tr>
+                    <tr>
+                        <th scope="row" class="numCol">3</td>
+                        <td>eco plan</td>
+                        <td>best fit for your money</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <th scope="row" class="numCol">4</td>
+                        <td>sum</td>
+                        <td>N/A</td>
+                        <td>$223.75</td>
+                    </tr>
+                </tfoot>
+            </table>
+
+            <br/>
+            <!--2/2 USING BOOTSTRAP LIBRARY FOR CSS-->
+            <div class="alert alert-danger" role="alert">
+                A simple danger alert—check it out!
+            </div>
+            <!--grabbed from the link below (components in bootstraps documentation):-->
+            <!--https://getbootstrap.com/docs/4.4/components/alerts/-->
+
+            <br/>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+            <!--JavaScript greeting-->
+            <br/><br/>
+            <h2 id="result">Say hello to the future!</h2>
+            <form onsubmit="greet(); return false">
+                <input type="text" id="name">
+                <input type="submit" value="Hello!">
+            </form>
+        </main>
+
+        <footer>
+            <br/>
+            <!--an anchor hyperlinked to a universal URL-->
+            <!--you can wrap anything inside anchor tags like pictures-->
+            <a href="https://www.google.com/" target="_blank">
+                <img src="https://cdn.vox-cdn.com/thumbor/Pkmq1nm3skO0-j693JTMd7RL0Zk=/0x0:2012x1341/1200x800/filters:focal(0x0:2012x1341)/cdn.vox-cdn.com/uploads/chorus_image/image/47070706/google2.0.0.jpg" alt="a button" style="width: 50%;">
+            </a>
+
+            <br/>
+            <!--an anchor hyperlinked to a local relative html file-->
+            <a href="./counter.html">Counter</a>
+            <a href="./geolocation.html">Geolocation</a>
+            <a href="./size.html">Size</a>
+            <a href="./input.html">Input</a>
+            <a href="./dragdrop.html">Drag & Drop</a>
+            <a href="./media.html">Media</a>
+            
+            <br/><br/><br/>
+            <div style="text-align: center; line-height: 0.5;">
+                <!--an anchor hyperlinked to a section on current document-->
+                <a href="#top">
+                    <p style="font-size: 50px;">⟰</p>
+                    <p>Go to top!</p>
+                </a>
+            </div>
+        </footer>
+
+    </body>
+
+</html>
