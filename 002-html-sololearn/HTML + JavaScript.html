@@ -1,44 +1,58 @@
 <html lang="en-US">
-	<head>
-		<title>SoloLearn HTML Fundamentals | SepSol</title>
-	</head>
-	<body>
-		<h1>The Web Structure</h1>
-		<p>The ability to code using HTML is essential for any web professional. Acquiring this skill should be the starting point for anyone who is learning how to create content for the web.</p>
-		<p><b>HTML</b>: Structure</p>
-		<p><b>CSS</b>: Presentation</p>
-		<p><b>JavaScript</b>: Behavior</p>
-		<br/>
-		<p><b>PHP or similar</b>: Backend</p>
-		<p><b>CMS</b>: Content Management</p>
-		<hr/> <!--a Horizental Rule (hr)-->
-		
-		<br/>
-		<h1>Attributes</h1>
-		<p>This is my first paragraph.</p>
-		<p>This is my second paragraph which uses<br/>line breaks to make text even more interesting!</p>
-		<!-- Line Break -->
-		<br>
-		<hr color="red" size="10" align="right" width="50%"/>
-		<hr color="999999" size="10" align="right" width="50px"/>
-		<hr color="999999" size="10" align="right" width="50"/>
-		<p align="left">This paragraph is aligned left.</p>
-		<p align="center">This paragraph is aligned to center.</p>
-		<p align="right">This paragraph is aligned to right.</p>
-		<p align="justify">This paragraph is justified. This paragraph is justified. This paragraph is justified. This paragraph is justified. This paragraph is justified. </p>
-		<!-- Horizental Line -->
-		<hr/>
-		<hr>
-		<br/>
-		<h1>Formating Elements</h1>
-		<p><big>big</big> regular <small>small</small></p>
-		<p>regular <b>bold</b> <strong>strong</strong></p>
-		<p>regular <i>italic</i> <em>emphasized</em></p>
-		<p>regular <u>underlined</u> <ins>inserted</ins></p>
-		<p>regular <s>strikethrough</s> <del>deleted</del></p>
-		<p><sup>superscripted</sup> regular <sub>subscripted</sub></p>
-		
-		<!-- Browsers display <strong> as <b>, and <em> as <i>.
+
+<head>
+	<title>SoloLearn HTML Fundamentals | SepSol</title>
+</head>
+
+<body>
+
+	<h1>The Web Structure</h1>
+	<p>The ability to code using HTML is essential for any web professional.
+		Acquiring this skill should be the starting point for anyone who is learning how to create content for the web.
+		Notice how the spaces and line breaks are ignored.</p>
+	<pre>
+		Now this is a 'pre-formated' text.     Here the spaces
+			and line break are not ignored.
+
+			The text inside a 'pre' element is displayed in a fixed-width font (usually Courier), and it preserves both spaces and line breaks:
+	</pre>
+	<p><b>HTML</b>: Structure</p>
+	<p><b>CSS</b>: Presentation</p>
+	<p><b>JavaScript</b>: Behavior</p>
+	<br />
+	<p><b>PHP or similar</b>: Backend</p>
+	<p><b>CMS</b>: Content Management</p>
+	<hr />
+	<!--a Horizental Rule (hr)-->
+
+	<br />
+	<h1>Attributes</h1>
+	<p>This is my first paragraph.</p>
+	<p>This is my second paragraph which uses<br />line breaks to make text even more interesting!</p>
+	<!-- Line Break -->
+	<br>
+	<hr color="red" size="10" align="right" width="50%" />
+	<hr color="999999" size="10" align="right" width="50px" />
+	<hr color="999999" size="10" align="right" width="50" />
+	<p align="left">This paragraph is aligned left.</p>
+	<p align="center">This paragraph is aligned to center.</p>
+	<p align="right">This paragraph is aligned to right.</p>
+	<p align="justify">This paragraph is justified. This paragraph is justified. This paragraph is justified. This
+		paragraph is justified. This paragraph is justified. </p>
+	<!-- Horizental Line -->
+	<hr />
+	<hr>
+	<br />
+	<h1>Formating Elements</h1>
+	<p><big>big</big> regular <small>small</small></p>
+	<p>regular <b>bold</b> <strong>strong (semantic)</strong></p>
+	<p>regular <i>italic</i> <em>emphasized (semantic)</em></p>
+	<p>regular <u>underlined</u> <ins>inserted</ins></p>
+	<p>regular <s>strikethrough</s> <del>deleted</del></p>
+	<p><sup>superscripted</sup> regular <sub>subscripted</sub></p>
+	<p>regular <mark>marked text</mark></p>
+
+	<!-- Browsers display <strong> as <b>, and <em> as <i>.
 		However, the meanings of these tags differ:
 		<b> and <i> define bold and italic text, respectively,
 		while <strong> and <em> indicate that the text is "important".
@@ -51,178 +65,178 @@
 		but it could also mean a lower tone for a speaking program like
 		Jaws (for blind people). And strong on a Palm Pilot may be an underline
 		(since you can't bold a bold).-->
-		
-		<br/>
-		<h1>Heading 1</h1>
-		<h2>Heading 2</h2>
-		<h3>Heading 3</h3>
-		<h4>Heading 4</h4>
-		<h5>Heading 5</h5>
-		<h6>Heading 6</h6>
-		
-		<!-- For SEO (search engine optimization), 
+
+	<br />
+	<h1>Heading 1</h1>
+	<h2>Heading 2</h2>
+	<h3>Heading 3</h3>
+	<h4>Heading 4</h4>
+	<h5>Heading 5</h5>
+	<h6>Heading 6</h6>
+
+	<!-- For SEO (search engine optimization), 
 		never use h1 more than once per page. Also never break the structure, 
 		for example, don't use h1 then jump to h3. 
 		Finally, most websites almost never use headings below h3.
 		
 		It is advisable to use h1 or h2 for topic title and 
 		h3 for subtopic heading on web pages.-->
-		
-		<br/>
-		<h1><big><big><big>REALLY BIG HEADER!!!</big></big></big></h1>
-		
-		<br/>
-		<h1>Elements with no ending tag</h1>
-		<hr/>
-		<img/>
-		<link/>
-		<meta/>
-		<input/>
-		<area/>
-		<base/>
-		<br/>
-		<col/>
-		<command/>
-		<embed/>
-		<keygen/>
-		<pattern/>
-		<param/>
-		<source/>
-		<track/>
-		<wbr/>
-		<!-- You can also remove "/" from their ending.-->
-		
-		<br/>
-		<h1>Image Tag</h1>
-		<img><br>
-		<img/><br>
-		<img src="../000-media/image.jpg"/><br>
-		<img src="../000-media/image.jpg" alt="alternative text"/><br>
-		<img src="../000-media/image.jpeg" alt="alternative text" width="50%"><br>
-		<img src="../000-media/image.jpeg" alt="alternative text" width="500px"><br>
-		<img src="../000-media/image.jpeg" alt="alternative text" width="500px" height="500px"><br>
-		<img src="../000-media/image.jpeg" alt="alternative text" width="500px" height="500px" border="10px"><br>
-		<!-- Re-sizing images has negative score in SEO ranks.
+
+	<br />
+	<h1><big><big><big>REALLY BIG HEADER!!!</big></big></big></h1>
+
+	<br />
+	<h1>Elements with no ending tag</h1>
+	<hr />
+	<img />
+	<link />
+	<meta />
+	<input />
+	<area />
+	<base />
+	<br />
+	<col />
+	<command />
+	<embed />
+	<keygen />
+	<pattern />
+	<param />
+	<source />
+	<track />
+	<wbr/>
+	<!-- You can also remove "/" from their ending.-->
+
+	<br />
+	<h1>Image Tag</h1>
+	<img><br>
+	<img /><br>
+	<img src="../000-media/image.jpg" /><br>
+	<img src="../000-media/image.jpg" alt="alternative text" /><br>
+	<img src="../000-media/image.jpeg" alt="alternative text" width="50%"><br>
+	<img src="../000-media/image.jpeg" alt="alternative text" width="500px"><br>
+	<img src="../000-media/image.jpeg" alt="alternative text" width="500px" height="500px"><br>
+	<img src="../000-media/image.jpeg" alt="alternative text" width="500px" height="500px" border="10px"><br>
+	<!-- Re-sizing images has negative score in SEO ranks.
 		and its better to use the original size.
 		You should never use html for styling. Instead you can do it in CSS-->
-		
-		<!-- for an image subtitle: -->
-		<br/>
-		<h1>Image Tag</h1>
-		<figure>
-			<image src="../000-media/image.jpeg" width="50%">
+
+	<!-- for an image subtitle: -->
+	<br />
+	<h1>Image Tag</h1>
+	<figure>
+		<image src="../000-media/image.jpeg" width="50%">
 			<figcaption>This is a figure caption</figcaption>
-		</figure>
-		
-		<br>
-		<h1>Links (Anchor & HyperLink Reference)</h1>
-		<a href=""></a>
-		<a href="">anchored text</a>
-		<a href="../000-media/image.jpeg">anchored hyperlink reference</a><br>
-		<!-- target attribute of a elemet -->
-		<a href="../000-media/image.jpeg" target="_blank">anchored hyperlink reference with blank target framename</a><br>
-		<a href="../000-media/image.jpeg" target="_self">anchored hyperlink reference with self target framename</a><br>
-		<a href="../000-media/image.jpeg" target="_parent">anchored hyperlink reference with parent target framename</a><br>
-		<a href="../000-media/image.jpeg" target="_top">anchored hyperlink reference with top target framename</a><br>
-		<!-- 
+	</figure>
+
+	<br>
+	<h1>Links (Anchor & HyperLink Reference)</h1>
+	<a href=""></a>
+	<a href="">anchored text</a>
+	<a href="../000-media/image.jpeg">anchored hyperlink reference</a><br>
+	<!-- target attribute of a elemet -->
+	<a href="../000-media/image.jpeg" target="_blank">anchored hyperlink reference with blank target framename</a><br>
+	<a href="../000-media/image.jpeg" target="_self">anchored hyperlink reference with self target framename</a><br>
+	<a href="../000-media/image.jpeg" target="_parent">anchored hyperlink reference with parent target framename</a><br>
+	<a href="../000-media/image.jpeg" target="_top">anchored hyperlink reference with top target framename</a><br>
+	<!-- 
 		_blank	open the link in a new window or a new tab
 		_self	open the link in the same window as link
 		_parent	open the link in the main/parent frame
 		_top	open the link in the top frame of browser window
 		-->
-		<p>This is an <a href="../000-media/image.jpeg">anchored hyperlink reference</a>.</p>
-		<a href="../000-media/image.jpeg"><img src="../000-media/image.jpeg" width="50%"></a>
-		
-		<br>
-		<h1>Lists</h1>
-		<!-- ol= ordered list  |  li= list item -->
-		<ol>
-			<li>this</li>
-			<li>is</li>
-			<li>an</li>
-			<li>ordered</li>
-			<li>list</li>
-		</ol>
-		
-		<!-- ol type ="a/A/i/I"
+	<p>This is an <a href="../000-media/image.jpeg">anchored hyperlink reference</a>.</p>
+	<a href="../000-media/image.jpeg"><img src="../000-media/image.jpeg" width="50%"></a>
+
+	<br>
+	<h1>Lists</h1>
+	<!-- ol= ordered list  |  li= list item -->
+	<ol>
+		<li>this</li>
+		<li>is</li>
+		<li>an</li>
+		<li>ordered</li>
+		<li>list</li>
+	</ol>
+
+	<!-- ol type ="a/A/i/I"
 		type="a" = counts as a,b,c,...
 		type="A" = counts as A,B,C,...
 		type="i" = counts as i,ii,iii,...
 		type="I" = counts as I,II,III,...
 		---- ol start="1/2/3/..."
 		will start the count from a custom place -->
-		
-		<ol type="I" start="4">
-			<li>this</li>
-			<li>is an</li>
-			<li>ordered list</li>
-			<li>with big</li>
-			<li>roman numbers</li>
-			<li> which starts</li>
-			<li>from IV or 4</li>
-		</ol>
-		
-		<!-- ul= unordered list  |  li= list item -->
-		<ul>
-			<li>this</li>
-			<li>is</li>
-			<li>an</li>
-			<li>unordered</li>
-			<li>list</li>
-		</ul>
-		
-		<!-- for 'ul' you can define bullet shape styles using the 'style' attribute
+
+	<ol type="I" start="4">
+		<li>this</li>
+		<li>is an</li>
+		<li>ordered list</li>
+		<li>with big</li>
+		<li>roman numbers</li>
+		<li> which starts</li>
+		<li>from IV or 4</li>
+	</ol>
+
+	<!-- ul= unordered list  |  li= list item -->
+	<ul>
+		<li>this</li>
+		<li>is</li>
+		<li>an</li>
+		<li>unordered</li>
+		<li>list</li>
+	</ul>
+
+	<!-- for 'ul' you can define bullet shape styles using the 'style' attribute
 		though it's better to define style of lists in CSS.
 		<ul style="list-style-type:circle/disc/square/none"> OR
 		<ul type="circle/disc/square/none"> -->
-		
-		<ul type="circle">
-			<li>an unordered list</li>
-			<li>with circle type</li>
-		</ul>
 
-		<ul style="list-style-type:circle">
-			<li>an unordered list</li>
-			<li>with circle style</li>
-		</ul>
-		
-		<ul style="list-style-type:disc">
-			<li>an unordered list</li>
-			<li>with disc style</li>
-		</ul>
-				
-		<ul style="list-style-type:square">
-			<li>an unordered list</li>
-			<li>with square style</li>
-		</ul>
-		
-		<ul style="list-style-type:none">
-			<li>an unordered list</li>
-			<li>with none style</li>
-		</ul>
-			
-		<!-- bl= bullet list  |  li= list item -->
-		<bl>
-			<li>this</li>
-			<li>is</li>
-			<li>a</li>
-			<li>bullet</li>
-			<li>list</li>
-		</bl>
-		
-		<!-- dl= description list  |  dt= define term/name  |  dd= define description -->
-		<dl>
-			<dt>This is</dt>
-				<dd>a description list</dd>
-			<dt>define a term</dt>
-				<dd>and define a description</dd>
-			<dt>Tiger</dt>
-				<dd>Tiger is a cat</dd>
-			<dt>Lion</dt>
-				<dd>Lion is the king of cats</dd>
-		</dl>
-		
-		<!-- Horizental Unordered List:
+	<ul type="circle">
+		<li>an unordered list</li>
+		<li>with circle type</li>
+	</ul>
+
+	<ul style="list-style-type:circle">
+		<li>an unordered list</li>
+		<li>with circle style</li>
+	</ul>
+
+	<ul style="list-style-type:disc">
+		<li>an unordered list</li>
+		<li>with disc style</li>
+	</ul>
+
+	<ul style="list-style-type:square">
+		<li>an unordered list</li>
+		<li>with square style</li>
+	</ul>
+
+	<ul style="list-style-type:none">
+		<li>an unordered list</li>
+		<li>with none style</li>
+	</ul>
+
+	<!-- bl= bullet list  |  li= list item -->
+	<bl>
+		<li>this</li>
+		<li>is</li>
+		<li>a</li>
+		<li>bullet</li>
+		<li>list</li>
+	</bl>
+
+	<!-- dl= description list  |  dt= define term/name  |  dd= define description -->
+	<dl>
+		<dt>This is</dt>
+		<dd>a description list</dd>
+		<dt>define a term</dt>
+		<dd>and define a description</dd>
+		<dt>Tiger</dt>
+		<dd>Tiger is a cat</dd>
+		<dt>Lion</dt>
+		<dd>Lion is the king of cats</dd>
+	</dl>
+
+	<!-- Horizental Unordered List:
 		HTML lists can be styled in many different types.
 		Horizontal list is one of the type
 		
@@ -243,20 +257,22 @@
 		</body>
 		</html>
 		-->
-		
-		<ol type="a" start="2">
-			<li>this is</li>
-			<li>an ordered list</li>
-			<li>which starts from 'b'</li>
-				<ul type="circle">
-					<li>with nested</li>
-					<li>unordered list</li>
-					<li>which has circle type</li>
-				</ul>
-			<li>that was nested</li>
-			<li>it also supports anchored hyperlink references like: <a href="http://www.google.com" target="_blank">Google</li>
-		</ol>
-		
-		
-	</body>
+
+	<ol type="a" start="2">
+		<li>this is</li>
+		<li>an ordered list</li>
+		<li>which starts from 'b'</li>
+		<ul type="circle">
+			<li>with nested</li>
+			<li>unordered list</li>
+			<li>which has circle type</li>
+		</ul>
+		<li>that was nested</li>
+		<li>it also supports anchored hyperlink references like: <a href="http://www.google.com" target="_blank">Google
+		</li>
+	</ol>
+
+
+</body>
+
 </html>
