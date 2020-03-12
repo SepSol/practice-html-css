@@ -13,6 +13,8 @@
             padding-right: 30%;
         }
     </style>
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="./anchors.css">
 </head>
 
 <body>
@@ -21,7 +23,7 @@
     no paragraph     with spaces
     and line breaks
 
-    <p>paragraph with no ending
+    <p>paragraph with no end tag
 
     <p>paragraph     with spaces
         and line breaks</p>
@@ -78,7 +80,7 @@
 
     <hr>
 
-    <h2>HTML Colors</h2>
+    <h2 id="colorsCh">HTML Colors</h2>
     <p>HTML colors are specified using:</p>
     <ul>
         <li>predefined color names</li> <!--HTML supports 140 standard color names.-->
@@ -93,10 +95,114 @@
                     padding-top: 15px;
                     padding-bottom: 20px;
                     font-size: xx-large; 
-                    color: rgb(83, 23, 23); 
+                    font-weight: bolder;
+                    font-family: 'Courier New', Courier, monospace;
+                    color: rgba(83, 23, 23, 1); 
                     background-color: #f7de9b; 
                     border:4px dashed hsla(180, 100%, 30%, 1);"
         >Testing Colors!</h3>
+    </div>
+
+    <hr>
+
+    <h2>Links</h2>
+    <p>A link does not have to be text. It can be an image or any other HTML element.</p>
+    <a href="https://www.w3schools.com/html/" target="_self">Learn more about HTML links.</a>
+    <!--Note: Without a forward slash at the end of subfolder addresses, you might generate two requests to the server. Many servers will automatically add a forward slash to the end of the address, and then create a new request.-->
+    <p>The example above used an absolute URL (a full web address). A local link (link to the same web site) is specified with a relative URL (without https://www....).</p>
+    <a href="html_links.asp" target="_blank">Learn more about HTML links.</a>
+
+    <h3>The Target Attribute</h3>
+    <p>The target attribute specifies where to open the linked document. The target attribute can have one of the following values:</p>
+    <ul>
+        <li><span class="code">_blank</span> - Opens the linked document in a new window or tab</li>
+        <li><span class="code">_self</span> - Opens the linked document in the same window/tab as it was clicked (this is default)</li>
+        <li><span class="code">_parent</span> - Opens the linked document in the parent frame</li>
+        <li><span class="code">_top</span> - Opens the linked document in the full body of the window</li>
+        <li><i>framename</i> - Opens the linked document in a named frame</li>
+        <!--Tip: If your webpage is locked in a frame, you can use target="_top" to break out of the frame.-->
+    </ul>
+
+    <a href="https://geekprank.com/fbi-warning/" title="click here to start the download">
+        <img src="../000-media/download button.png" alt="download button" style="border:0; width:250px;">
+        <!--
+            Loading images takes time. Large images can slow down your page. Use images carefully.
+            Note: The alt attribute is required. A web page will not validate correctly without it.
+            Note: border:0; is added to prevent IE9 (and earlier) from displaying a border around the image (when the image is a link).
+            Note: Always specify the width and height of an image. If width and height are not specified, the page might flicker while the image loads.
+        -->
+    </a>
+
+    <h3>JavaScript Events</h3>
+    <p>To use an HTML button as a link, you have to add some JavaScript code. JavaScript allows you to specify what happens at certain events, such as a click of a button:</p>
+    <button onclick="document.location = '#'" title="open up">Empty HTML Link</button>
+
+    <h3>HTML Bookmarks</h3>
+    <p>HTML bookmarks are used to allow readers to jump to specific parts of a Web page. Bookmarks can be useful if a webpage is very long. You can also add a link to a bookmark on another page:</p>
+    <!-- <a href="html_demo.html#C4">Jump to Chapter 4</a> -->
+    <a id="abutton" href="#colorsCh">Go to Colors Chapter</a>
+
+    <hr>
+
+    <h2>Images</h2>
+    <p>
+        <img src="../000-media/smiley face looking right.png" alt="a smiley face" style="width:40px; float:right">
+        A paragraph with a floating image. The image will float to the <span class="code">right</span> of the text. Use the CSS float property to let the image float to the right or to the left of a text.
+    </p>
+    <p>
+        <img src="../000-media/smiley face looking left.png" alt="a smiley face" style="width:40px; float:left">
+        A paragraph with a floating image. The image will float to the <span class="code">left</span> of the text. Use the CSS float property to let the image float to the right or to the left of a text.
+    </p>
+    <img src="../000-media/I'm proud of you.gif" alt="" width="300">
+    <!--HTML allows animated GIFs - the width, height, and style attributes are valid in HTML.
+    However, we suggest using the style attribute. It prevents styles sheets from changing the size of images.-->
+
+    <h3>Image Maps</h3>
+    <p>The <span class="code">map</span> tag defines an image-map. An image-map is an image with clickable areas. The idea behind an image map is that you should be able to perform different actions depending on where in the image you click. To create an image map you need an image, and a map containing some rules that describe the clickable areas.</p>
+    <h4>Image</h4>
+    <p>The image is inserted using the <span class="code">img</span> tag. The only difference from other images is that you must add a <span class="code">usemap</span> attribute:</p>
+
+    <img src="https://www.w3schools.com/html/workplace.jpg" alt="Workplace" title="Workplace" usemap="#workmap">
+    <map name="workmap">
+        <area shape="rect" coords="34,44,270,350" alt="Computer" title="Computer" href="https://www.w3schools.com/html/computer.htm">
+        <area shape="rect" coords="290,172,333,250" alt="Phone" title="Phone" href="https://www.w3schools.com/html/phone.htm">
+        <area shape="circle" coords="337,300,44" alt="Coffee" title="Coffee" href="https://www.w3schools.com/html/coffee.htm">
+    </map>
+
+    <h4>Map</h4>
+    <p>Then add a <span class="code">map</span> element. The <span class="code">map</span> element is used to create an image map, and is linked to the image by using the <span class="code">name</span> attribute. The <span class="code">name</span> attribute must have the same value as the <span class="code">usemap</span> attribute.</p>
+    <p class="note"><strong>Note:</strong> You may insert the <span class="code">map</span> element anywhere you like, it does not have to be inserted right after the image.</p>
+    <h4>Area</h4>
+    <p>A clickable area is defined using an <span class="code">area</span> element. You must define the shape of the area, and you can choose one of these values:</p>
+    <ul>
+        <li><span class="code">rect</span> - defines a rectangular region</li>
+        <li><span class="code">circle</span> - defines a circular region</li>
+        <li><span class="code">poly</span> - defines a polygonal region</li>
+        <li><span class="code">default</span> - defines the entire region</li>
+        <!--LEARN MORE: https://www.w3schools.com/html/html_images_imagemap.asp-->
+    </ul>
+    <!--
+        A clickable area does not have to be a link to another page, it can also trigger a JavaScript function.
+        Add a click event on the <area> element to execute a JavaScript function:
+            <area shape="circle" coords="337,300,44" onclick="myFunction()"> 
+        You can use the onclick attribute to execute a JavaScript function when the area is clicked
+    -->
+
+    <h3>Background Image</h3>
+    <div style="
+        background-image: url(https://freedesignfile.com/upload/2017/02/White-abstract-background-with-wave-vector-illustration-01.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+    ">  <!--comment out each line and see the results.-->
+        <p>To add a background image in HTML, use the CSS property <span class="code">background-image</span>. By default the background-image property will try to fill the div element with images until it has reach the end.</p>
+        <ul>
+            <li>If the background image is smaller than the element, the image will repeat itself, horizontally and vertically, until it has reach the end of the element.</li>
+            <li>To avoid the background image from repeating itself, use the <span class="code">background-repeat</span> property.</li>
+            <li>If you want  the background image cover the entire element, you can set the <span class="code">background-size</span> property to <span class="code">cover</span>.</li>
+            <li>If  you want  the background image stretch to fit the entire image in the element, you can set the <span class="code">background-size</span> property to <span class="code">100% 100%</span>. </li>
+            <li>Also, to make sure the entire element is always covered, set the <span class="code">background-attachment</span> property to <span class="code">fixed</span>. Try resizing the browser window, and you will see that the image will stretch, but always cover the entire element.</li>
+        </ul>
     </div>
 </body>
 

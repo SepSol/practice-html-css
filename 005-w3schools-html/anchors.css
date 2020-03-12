@@ -1,0 +1,42 @@
+/* By default, a link will appear like this (in all browsers):
+
+    hover:  A hovered link is underlined
+    link:   An unvisited link is underlined and blue
+    visited:A visited link is underlined and purple
+    active: An active link is underlined and red
+
+You can change the default colors, by using CSS: */
+
+a:visited#abutton {
+    color: tomato;
+    font-weight: bold;
+    font-family: sans-serif;
+    background-color: white;
+    border: 5px solid tomato;
+    padding: 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
+a:hover#abutton, a:link#abutton {
+    color: white;
+    font-weight: bold;
+    font-family: sans-serif;
+    background-color: tomato;
+    border: 5px solid tomato;
+    padding: 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
+a:hover#abutton {
+    background-color: red;
+}
+
+a:active {
+    color: green;
+    background-color: transparent;
+    text-decoration: underline;
+}
