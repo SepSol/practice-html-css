@@ -1,0 +1,24 @@
+/* Chaining Selectors */
+
+.heading {
+    text-transform: capitalize;
+}
+
+h2.heading {
+    font-weight: 100;
+}
+
+h2.heading#breaking {
+    color: red;
+}
+
+#breaking {
+    background-color: yellow;
+}
+
+
+/* Nesting Selectors */
+
+.nav li {
+    color: green;
+}

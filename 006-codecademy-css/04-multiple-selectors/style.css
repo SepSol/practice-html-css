@@ -1,0 +1,20 @@
+h1, p {
+    font-family: 'courier new';
+    /* The font-family CSS property is used to specify the typeface in a rule set. Fonts must be available to the browser to display correctly, either on the computer or linked as a web font. If a font value is not available, browsers will display their default font. When using a multi-word font name, it is best practice to wrap them in quotes. */
+
+    font-size: 50px;
+    font-weight: bold;
+
+    text-align: center;
+    text-transform: uppercase;
+
+    opacity: 0.3;
+    /*  0 = transparent
+        1 = opaque */
+
+    color: royalblue;
+    background-color: lightgrey;
+
+    background-image: url(../../000-media/sample.jpg);
+    background-size: cover;
+}
