@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="utf-8">
+    <title>SoloLearn</title>
+    <style>
+
+    div {
+        animation: mymove 1s;
+        border-radius: 0 0 100px 100px;
+        background-color: green;
+        color: white;
+        padding: 50px;
+    }
+
+    @keyframes mymove {
+        from {border-radius: 0 0 0px 0px;}
+        to {border-radius: 0 0 100px 100px;}
+    }
+
+    edit:
+    dancing corners
+    div {
+        animation: mymove 1.75s infinite ;
+        border-radius: 10px 10px 10px 100px;
+        background-color: green;
+        color: white;
+        padding: 50px;
+    }
+
+    @keyframes mymove {
+        0% {border-radius: 10px 10px 10px 100px;}
+        25% {border-radius: 100px 10px 20px 10px;}
+        50% {border-radius: 10px 100px 10px 20px;}
+        75% {border-radius: 20px 10px 100px 10px;}
+        100% {border-radius: 10px 10px 10px 100px;}
+    }
+    
+    </style>
+</head>
+<body>
+    <div></div>
+</body>
+</html>
