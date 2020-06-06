@@ -1,0 +1,52 @@
+div {
+  background: #ddd;
+}
+
+p {
+  color: crimson;
+}
+
+div p {
+  color: cornflowerblue;
+}
+
+
+
+
+.one {
+  background-color: #ccc;
+}
+
+p.one.two {
+  background-color: bisque;
+}
+
+p.two#identify {
+  background-color: aquamarine;
+}
+
+div p.two#idenfigy, p.one {
+  color: yellowgreen;
+}
+
+
+
+/* HAS AN ATTRIBUTE OF */
+a[href] {
+  border: 2px crimson solid;
+}
+
+/* HAS AN ATTRIBUTE OF EXACTLY */
+a[href="https://soft98.ir"] {
+  border: 3px green dashed;
+}
+
+/* ATTRIBUTE ENDS WITH */
+a[href$=".ir"] {
+  background: yellowgreen;
+}
+
+/* INCLUDES IN ATTRIBUTE */
+a[href*="google"] {
+  background-color: rosybrown;
+}
